@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>chapter 2 - example 7</title>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+
+    <button ng-click="ctrl.changesNotes()">Changes Notes</button>
+    <br/>
+    <p>Dom elements change every time someone clicks</p>
+    <div ng-repeat="note in ctrl.notes1">
+        {{note.$$hashKey}}
+        <span ng-bind="note.label"></span>
+        <span ng-bind="note.done"></span>
+    </div>
+    <br/>
+    <p>Dom elements are reused when someone clicks</p>
+    <div ng-repeat="note in ctrl.notes2 track by note.id">
+        <!--{{note.$$hashKey}}-->
+        <span ng-bind="note.label"></span>
+        <span ng-bind="note.done"></span>
+    </div>
+</body>
+</html>

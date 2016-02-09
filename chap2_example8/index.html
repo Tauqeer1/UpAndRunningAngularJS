@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>chapter 2 - example 8</title>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+<table>
+    <tr ng-repeat-start="note in ctrl.notes">
+        <td>{{note.label}}</td>
+    </tr>
+    <tr ng-repeat-end>
+        <td>Done : {{note.done}}</td>
+    </tr>
+</table>
+</body>
+</html>

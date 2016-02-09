@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Chapter 2 - example6</title>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+<div ng-repeat="note in ctrl.notes" style="border: 2px solid">
+
+    <b><span ng-bind="note.label"></span></b>
+    <div>First Element : {{$first}}</div>
+    <div>Middle Element : {{$middle}}</div>
+    <div>Last Elemet : {{$last}}</div>
+    <div>Index of Element : {{$index}}</div>
+    <div>At even position : {{$even}}</div>
+    <div>At odd position : {{$odd}}</div>
+
+
+    <!--<span ng-bind="note.done"></span>-->
+
+</div>
+</body>
+</html>
