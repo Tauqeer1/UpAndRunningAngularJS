@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Chapter 4 -example 6  </title>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+<form ng-submit="ctrl.submit()" name="myForm">
+    <input type="text"
+           name="uname"
+           ng-model="ctrl.user.username"
+           required
+           ng-minlength="4"
+           ng-maxlength="10"/>
+    <span ng-show="myForm.uname.$error.required">
+        This is required field
+    </span>
+    <span ng-show="myForm.uname.$error.minlength">
+        Minimum Length is 4
+    </span>
+    <span ng-show="myForm.uname.$error.$invalid">
+        This field is invalid
+    </span>
+    <span ng-show="myForm.uname.$error.maxlength">
+        Maximum length is 10
+    </span>
+    <input type="password"
+           name="pwd"
+            ng-model="ctrl.user.password"
+            required/>
+    <span ng-show="myForm.pwd.$error.required">
+        This is a required field
+    </span>
+    <input type="submit" value="Submit" ng-disabled="myForm.$invalid"/>
+</form>
+</body>
+</html>

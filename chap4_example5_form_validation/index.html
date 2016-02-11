@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Chapter 4 -example 5</title>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+<form ng-submit="ctrl.submit()" name="myForm">
+    <input type="text" ng-model="ctrl.user.username"
+                       required
+                       ng-minlength="4"/>
+    <input type="password"
+            ng-model="ctrl.user.password"
+            required
+            />
+    <input type="submit" value="Submit" ng-disabled="myForm.$invalid"/>
+</form>
+</body>
+</html>

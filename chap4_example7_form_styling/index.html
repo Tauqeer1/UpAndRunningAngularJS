@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Chapter 4 -example 7</title>
+    <style>
+        .username.ng-valid{
+            background-color: green;
+        }
+        .username.ng-dirty.ng-invalid-required{
+            background-color: red;
+        }
+        .username.ng-dirty.ng-invalid-minlength{
+            background-color: lightpink;
+        }
+    </style>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+<form name="myForm" ng-submit="ctrl.submit()">
+    <input type="text" class="username" name="uname"
+            ng-model="ctrl.user.username" required ng-minlength="4"/>
+    <input type="submit" value="Submit" ng-disabled="myForm.$invalid"/>
+</form>
+</body>
+</html>

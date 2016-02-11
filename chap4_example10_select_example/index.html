@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Chapter 10 - example 10</title>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+<div>
+    <select ng-model="ctrl.selectedCountryId"
+            ng-options="c.id as c.label for c in ctrl.countries">
+    </select>
+    Selected Country ID : {{ctrl.selectedCountryId}}
+</div>
+<div>
+    <select ng-model="ctrl.selectedCountry"
+            ng-options="c.label for c in ctrl.countries">
+    </select>
+
+    Selected Country : {{ctrl.selectedCountry}}
+</div>
+</body>
+</html>

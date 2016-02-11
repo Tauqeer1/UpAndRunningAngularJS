@@ -1,0 +1,22 @@
+{
+  "name": "chap4_example1",
+  "homepage": "https://github.com/Tauqeer1/UpAndRunningAngularJS",
+  "authors": [
+    "tauqeer <tauqeer.shakir@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}
