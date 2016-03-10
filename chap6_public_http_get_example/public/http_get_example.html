@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 6 http example</title>
+    <style>
+        .item {
+            padding: 10px;
+        }
+    </style>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+
+<h1>Hello Servers</h1>
+<div ng-repeat="todo in ctrl.items" class="item">
+    <div><span>{{todo.label}}</span></div>
+    <div> - by <span>{{todo.author}}</span></div>
+</div>
+</body>
+</html>

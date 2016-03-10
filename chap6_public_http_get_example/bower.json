@@ -1,0 +1,22 @@
+{
+  "name": "chap6_public_http_get_example",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "tauqeer <tauqeer.shakir@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Tauqeer1/UpAndRunningAngularJS",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}

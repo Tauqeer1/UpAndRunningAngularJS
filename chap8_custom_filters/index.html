@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="filtersApp">
+<div ng-controller="MainCtrl as ctrl">
+    <div>
+        Start Time(Timestamp) : {{ctrl.startTime}}
+    </div>
+    <div>
+        Start Time(DateTime) : {{ctrl.startTime | date:'medium'}}
+    </div>
+    <div>
+        Start Time(Our filter) : {{ctrl.startTime | timeAgo}}
+    </div>
+    <div>
+        someTimeAgo : {{ctrl.someTimeAgo | date:'short'}}
+    </div>
+    <div>
+        someTimeAgo (Our filter): {{ctrl.someTimeAgo | timeAgo}}
+    </div>
+</div>
+</body>
+</html>

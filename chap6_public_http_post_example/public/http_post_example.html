@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>http post</title>
+    <style>
+        .item {
+            padding: 10px;
+        }
+    </style>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+<h1>Hello Servers</h1>
+
+<div ng-repeat="todo in ctrl.items" class="item">
+    <div><span>{{todo.label}}</span></div>
+    <div>- by <span>{{todo.author}}</span></div>
+</div>
+
+<div>
+    <form name="addForm" ng-submit="ctrl.add()">
+        <input type="text" placeholder="Label" ng-model="ctrl.newTodo.label" required>
+        <input type="text" placeholder="Author" ng-model="ctrl.newTodo.author" required>
+        <input type="submit" value="add" ng-disabled="addForm.$invalid">
+    </form>
+</div>
+</body>
+</html>
